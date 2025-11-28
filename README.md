@@ -1,8 +1,8 @@
 # flutter_basics
 
-A new Flutter project.
+Basic Flutter Widgets and Concepts
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project demonstrates how to use flutter widgets and dart concepts. 
 
