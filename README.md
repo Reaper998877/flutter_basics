@@ -1,4 +1,4 @@
-# flutter_basics
+# Flutter Basics
 
 Basic Flutter Widgets and Concepts
 
