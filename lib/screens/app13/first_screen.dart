@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -82,7 +83,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Pick and Display Image", gitLink: ''),
+      appBar: CustomAppBar(title: "Pick and Display Image", gitLink: gitLinks["app13a"].toString()),
       body: Center(
         child: Column(
           mainAxisAlignment: .center,

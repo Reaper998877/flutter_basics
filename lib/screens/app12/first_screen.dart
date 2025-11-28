@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -313,7 +314,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: gitLinks["app12a"].toString(),),
       body: SingleChildScrollView(
         controller: controller,
         child: Column(

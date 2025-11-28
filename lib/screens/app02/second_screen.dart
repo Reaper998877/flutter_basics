@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -43,7 +44,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: gitLinks["app02a"].toString(),),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),

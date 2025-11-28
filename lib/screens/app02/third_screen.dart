@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/screens/app02/fourth_screen.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -18,7 +19,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: CustomAppBar(title: 'Part 3', gitLink: '',),
+            appBar: CustomAppBar(title: 'Part 3', gitLink: gitLinks["app02b"].toString(),),
 
       body: Center(
         child: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,

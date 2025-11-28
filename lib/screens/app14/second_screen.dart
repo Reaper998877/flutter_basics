@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/models.dart';
 import 'package:flutter_basics/app_theme.dart';
 import 'package:flutter_basics/widgets/build_data_table.dart';
@@ -91,7 +92,7 @@ class _SecondScreenState extends State<SecondScreen> {
         )
         .toList();
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: gitLinks["app14b"].toString(),),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.white,

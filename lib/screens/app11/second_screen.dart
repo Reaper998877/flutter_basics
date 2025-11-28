@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -16,7 +17,7 @@ class _SecondscreenState extends State<Secondscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: gitLinks["app11b"].toString(),),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

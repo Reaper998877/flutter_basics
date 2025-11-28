@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 
 import '../app03/second_screen.dart';
@@ -64,7 +65,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: gitLinks["app03a"].toString(),),
       body:
           ///////////////////////////////// Manually Filled Listview /////////////////////////////////
           // ListView(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 
 class FourthScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _FourthScreenState extends State<FourthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 4', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 4', gitLink: gitLinks["app03d"].toString(),),
       body: Center(
         child: ListWheelScrollView(
           itemExtent: 200,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:intl/intl.dart'; // new import added + new dependency added in pubspec.yaml
 
@@ -50,7 +51,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: gitLinks["app07b"].toString(),),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(

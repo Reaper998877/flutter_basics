@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
 
@@ -18,7 +19,7 @@ class _SecondScreenState extends State<SecondScreen> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: gitLinks["app12b"].toString(),),
       body: SizedBox(
         width: size.width,
         height: size.height,

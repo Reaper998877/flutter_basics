@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 
 import 'fourth_screen.dart';
@@ -43,7 +44,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 3', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 3', gitLink: gitLinks["app03c"].toString(),),
       body: ListView(
         ///////////////// Mapping single array in listview
         // children: arrNames.map((value) {

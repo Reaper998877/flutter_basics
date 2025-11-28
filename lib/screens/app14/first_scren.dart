@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sliver_sticky_collapsable_panel/utils/sliver_sticky_collapsable_panel_controller.dart';
@@ -21,7 +22,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: gitLinks["app14a"].toString(),),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.sizeOf(context).width * 0.05,

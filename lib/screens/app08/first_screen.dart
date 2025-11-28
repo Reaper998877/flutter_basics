@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 
 import 'second_screen.dart';
@@ -26,7 +27,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: gitLinks["app08a"].toString(),),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),

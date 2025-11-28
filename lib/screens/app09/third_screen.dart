@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/app_theme.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -45,7 +46,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 3', gitLink: '',),
+      appBar: CustomAppBar(title: 'Part 3', gitLink: gitLinks["app09c"].toString(),),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ReactiveForm(

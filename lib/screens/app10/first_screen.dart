@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 // No changes in Info.plist
@@ -56,7 +57,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Internet Check", gitLink: ''),
+      appBar: CustomAppBar(title: "Internet Check", gitLink: gitLinks["app10a"].toString()),
       body: SizedBox(
         width: MediaQuery.sizeOf(context).width,
         child: Column(

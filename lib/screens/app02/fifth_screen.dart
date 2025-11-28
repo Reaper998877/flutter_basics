@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/git_links.dart';
 import 'package:flutter_basics/widgets/stateless_widgts.dart';
 
 class FifthScreen extends StatefulWidget{
@@ -12,7 +13,7 @@ class _FifthScreenState extends State<FifthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: CustomAppBar(title: 'Part 5', gitLink: '',),
+            appBar: CustomAppBar(title: 'Part 5', gitLink: gitLinks["app02d"].toString(),),
 
       body: Column(
         children: const [
