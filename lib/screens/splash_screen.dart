@@ -36,15 +36,6 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Navigate to main screen after 3 seconds
-    // Future.delayed(const Duration(seconds: 3), () {
-    //   Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(
-    //       builder: (context) => const Home(title: 'Flutter Basics'),
-    //     ),
-    //   );
-    // });
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
