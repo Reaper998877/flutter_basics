@@ -188,7 +188,7 @@ class AppTheme {
           fontFamily: 'autourOne'
         ),
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.white, size: 20.0),
+        iconTheme: IconThemeData(color: Colors.white, size: 25.0),
       ),
       
       elevatedButtonTheme: ElevatedButtonThemeData(

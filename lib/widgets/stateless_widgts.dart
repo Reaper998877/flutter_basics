@@ -356,46 +356,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title),
       actions: [
-        PopupMenuButton(
-          icon: const Icon(Icons.more_vert),
-          itemBuilder: (context) => [
-            PopupMenuItem(
-              child: Row(
-                children: const [
-                  Icon(Icons.home, color: Colors.black),
-                  SizedBox(width: 8),
-                  Text('Home'),
-                ],
-              ),
-              onTap: () {
-                Future.delayed(const Duration(milliseconds: 100), () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(
-                      builder: (context) => const Home(title: 'Flutter Basics'),
-                    ),
-                    (route) => false,
-                  );
-                });
-              },
-            ),
-            PopupMenuItem(
-              child: Row(
-                children: const [
-                  Icon(FontAwesomeIcons.github, color: Colors.black),
-                  SizedBox(width: 8),
-                  Text('GitHub'),
-                ],
-              ),
-              onTap: ()async {
-                // On Android - Opens website within app
-                if (await launchUrl(Uri.parse(gitLink))) {
-                  debugPrint("Launch Successfull");
-                } else {
-                  debugPrint("Launch Failed! Error occurred");
-                }
-              },
-            ),
-          ],
+        IconButton(
+          onPressed: () async {
+            // On Android - Opens website within app
+            if (await launchUrl(Uri.parse(gitLink))) {
+              debugPrint("Launch Successfull");
+            } else {
+              debugPrint("Launch Failed! Error occurred");
+            }
+          },
+          icon: Icon(FontAwesomeIcons.github),
+        ),
+
+        IconButton(
+          onPressed: () async {
+            Future.delayed(const Duration(milliseconds: 100), () {
+              Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(
+                  builder: (context) => const Home(title: 'Flutter Basics'),
+                ),
+                (route) => false,
+              );
+            });
+          },
+          icon: Icon(Icons.home),
         ),
       ],
     );
@@ -405,25 +389,27 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-class RoundButton extends StatelessWidget{
-
+class RoundButton extends StatelessWidget {
   final String btnName;
-  final Icon? icon;  //  Icon? means icon can be null
-  final Color? bgColor;  //  Color? means color can be null
-  final TextStyle? textStyle;  //  TextStyle? means textStyle can be null
-  final VoidCallback? callback;  //  VoidCallback? means callback can be null
+  final Icon? icon; //  Icon? means icon can be null
+  final Color? bgColor; //  Color? means color can be null
+  final TextStyle? textStyle; //  TextStyle? means textStyle can be null
+  final VoidCallback? callback; //  VoidCallback? means callback can be null
 
   // Constructor
-  const RoundButton({super.key, required this.btnName,  // required means btnName is compulsory
+  const RoundButton({
+    super.key,
+    required this.btnName, // required means btnName is compulsory
     this.icon,
     this.bgColor = Colors.amber,
     this.textStyle,
-    this.callback});
+    this.callback,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: (){
+      onPressed: () {
         callback!(); // callback is not null
       },
 
@@ -432,21 +418,26 @@ class RoundButton extends StatelessWidget{
         backgroundColor: bgColor,
         shadowColor: Colors.black,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20))
-        )
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+        ),
       ),
 
-      child: icon!=null ? Row(  // checks if icon is null or not
-        // if icon is not null then Text widget and icon will be seen in a Row
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          icon!, // icon! means icon will be available
-          Padding(  padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Text(btnName, style: textStyle,),
-          )
-        ],
-      ) : Center(child: Text(btnName, style: textStyle,)), // if icon is null then only Text widget will be seen
+      child: icon != null
+          ? Row(
+              // checks if icon is null or not
+              // if icon is not null then Text widget and icon will be seen in a Row
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                icon!, // icon! means icon will be available
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  child: Text(btnName, style: textStyle),
+                ),
+              ],
+            )
+          : Center(
+              child: Text(btnName, style: textStyle),
+            ), // if icon is null then only Text widget will be seen
     );
   }
 }
-
