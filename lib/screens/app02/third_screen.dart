@@ -18,7 +18,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: CustomAppBar(title: 'Part 3'),
+            appBar: CustomAppBar(title: 'Part 3', gitLink: '',),
 
       body: Center(
         child: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,

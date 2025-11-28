@@ -45,7 +45,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 3'),
+      appBar: CustomAppBar(title: 'Part 3', gitLink: '',),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ReactiveForm(

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -81,29 +82,11 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "Pick and Display Image", gitLink: ''),
       body: Center(
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            const Text(
-              'Pick and Display Image',
-              style: TextStyle(
-                color: Colors.lightBlue,
-                fontSize: 18,
-                fontStyle: FontStyle.italic,
-                letterSpacing: 0.4,
-                shadows: [
-                  BoxShadow(
-                    color: Colors.black,
-                    spreadRadius: 2,
-                    blurStyle: BlurStyle.outer,
-                    blurRadius: 2,
-                  ),
-                ],
-              ),
-              softWrap: true,
-            ),
-
             _imageFile != null
                 ? Container(
                     // When _imageFile is not null. It is displayed in a square.

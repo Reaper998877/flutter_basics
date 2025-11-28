@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/widgets/stateless_widgts.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 // No changes in Info.plist
 
@@ -55,29 +56,12 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: "Internet Check", gitLink: ''),
       body: SizedBox(
         width: MediaQuery.sizeOf(context).width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "Internet Checker",
-              style: TextStyle(
-                color: Colors.lightBlue,
-                fontSize: 18,
-                fontStyle: FontStyle.italic,
-                letterSpacing: 0.4,
-                shadows: [
-                  BoxShadow(
-                    color: Colors.black,
-                    spreadRadius: 2,
-                    blurStyle: BlurStyle.outer,
-                    blurRadius: 2,
-                  ),
-                ],
-              ),
-              softWrap: true,
-            ),
             Icon(
               isConnectedToInternet ? Icons.wifi : Icons.wifi_off,
               size: 100,

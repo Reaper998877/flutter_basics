@@ -91,7 +91,7 @@ class _SecondScreenState extends State<SecondScreen> {
         )
         .toList();
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2'),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.white,

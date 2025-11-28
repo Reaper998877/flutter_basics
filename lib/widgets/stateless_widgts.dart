@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/app_theme.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import 'package:flutter_basics/screens/app09/second_screen.dart';
 import 'package:flutter_basics/home.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // This widgets are created by me.
 class RectangularItems extends StatelessWidget {
@@ -345,8 +347,9 @@ class CustomPopupMenuButton extends StatelessWidget {
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final String gitLink;
 
-  const CustomAppBar({super.key, required this.title});
+  const CustomAppBar({super.key, required this.title, required this.gitLink});
 
   @override
   Widget build(BuildContext context) {
@@ -359,7 +362,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             PopupMenuItem(
               child: Row(
                 children: const [
-                  Icon(Icons.home, color: Colors.blue),
+                  Icon(Icons.home, color: Colors.black),
                   SizedBox(width: 8),
                   Text('Home'),
                 ],
@@ -373,6 +376,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     (route) => false,
                   );
                 });
+              },
+            ),
+            PopupMenuItem(
+              child: Row(
+                children: const [
+                  Icon(FontAwesomeIcons.github, color: Colors.black),
+                  SizedBox(width: 8),
+                  Text('GitHub'),
+                ],
+              ),
+              onTap: ()async {
+                // On Android - Opens website within app
+                if (await launchUrl(Uri.parse(gitLink))) {
+                  debugPrint("Launch Successfull");
+                } else {
+                  debugPrint("Launch Failed! Error occurred");
+                }
               },
             ),
           ],

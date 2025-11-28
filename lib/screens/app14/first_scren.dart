@@ -21,7 +21,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1'),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.sizeOf(context).width * 0.05,

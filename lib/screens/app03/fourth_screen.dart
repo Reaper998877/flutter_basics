@@ -26,7 +26,7 @@ class _FourthScreenState extends State<FourthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 4'),
+      appBar: CustomAppBar(title: 'Part 4', gitLink: '',),
       body: Center(
         child: ListWheelScrollView(
           itemExtent: 200,

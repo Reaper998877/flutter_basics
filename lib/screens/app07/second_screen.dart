@@ -50,7 +50,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2'),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(

@@ -8,7 +8,7 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1'),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),

@@ -16,7 +16,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 1'),
+      appBar: CustomAppBar(title: 'Part 1', gitLink: '',),
 
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,

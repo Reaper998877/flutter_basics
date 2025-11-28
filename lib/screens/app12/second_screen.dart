@@ -18,7 +18,7 @@ class _SecondScreenState extends State<SecondScreen> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2'),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
       body: SizedBox(
         width: size.width,
         height: size.height,

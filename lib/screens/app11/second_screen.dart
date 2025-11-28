@@ -16,7 +16,7 @@ class _SecondscreenState extends State<Secondscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2'),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

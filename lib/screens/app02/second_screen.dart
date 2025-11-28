@@ -43,7 +43,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Part 2'),
+      appBar: CustomAppBar(title: 'Part 2', gitLink: '',),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
