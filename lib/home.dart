@@ -13,7 +13,7 @@ import 'package:flutter_basics/screens/app10/first_screen.dart' as app10;
 import 'package:flutter_basics/screens/app11/first_screen.dart' as app11;
 import 'package:flutter_basics/screens/app12/first_screen.dart' as app12;
 import 'package:flutter_basics/screens/app13/first_screen.dart' as app13;
-import 'package:flutter_basics/screens/app14/first_scren.dart' as app14;
+import 'package:flutter_basics/screens/app14/first_screen.dart' as app14;
 import 'data/module_list.dart';
 import 'app_theme.dart';
 
